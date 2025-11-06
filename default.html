@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crunchify Snacks - Healthy Roasted Chana</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: #fff;
+            color: #222;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+            header .logo {
+                font-weight: 700;
+                font-size: 1.4rem;
+                color: #f5a623;
+            }
+
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #444;
+            font-weight: 500;
+        }
+
+            nav a:hover {
+                color: #f5a623;
+            }
+
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 3rem 2rem;
+            background: #fff8ec;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero-text p {
+                color: #555;
+                line-height: 1.6;
+            }
+
+            .hero-text .buttons {
+                margin-top: 1.5rem;
+            }
+
+                .hero-text .buttons a {
+                    display: inline-block;
+                    background: #f5a623;
+                    color: #fff;
+                    padding: 0.8rem 1.5rem;
+                    border-radius: 2rem;
+                    text-decoration: none;
+                    font-weight: 600;
+                    margin-right: 1rem;
+                }
+
+        .hero img {
+            flex: 1;
+            max-width: 480px;
+            width: 100%;
+            border-radius: 1rem;
+            margin-top: 0px;
+        }
+
+        .section {
+            padding: 3rem 2rem;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+            .section h2 {
+                text-align: center;
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .product {
+            border: 1px solid #eee;
+            border-radius: 1rem;
+            overflow: hidden;
+            background: #fff;
+        }
+
+            .product img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+
+            .product .info {
+                padding: 1rem;
+            }
+
+            .product h3 {
+                font-size: 1.1rem;
+                margin: 0;
+            }
+
+            .product p {
+                color: #666;
+                font-size: 0.9rem;
+            }
+
+            .product .price {
+                font-weight: bold;
+                margin-top: 0.5rem;
+            }
+
+            .product a.btn {
+                display: inline-block;
+                margin-top: 0.8rem;
+                background: #f5a623;
+                color: #fff;
+                padding: 0.5rem 1rem;
+                border-radius: 1.5rem;
+                text-decoration: none;
+                font-size: 0.9rem;
+            }
+
+        .about {
+            text-align: center;
+            display:flex;
+            align-items:center;
+            color: #555;
+            line-height: 1.6;
+        }
+        .location {
+            text-align: center;
+            color: #555;
+            line-height: 1.6;
+        }
+        footer {
+            background: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+            footer a {
+                color: #f5a623;
+                text-decoration: none;
+            }
+
+        /* Product Page */
+        .product-page {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+            .product-page img {
+                flex: 1;
+                max-width: 450px;
+                border-radius: 1rem;
+            }
+
+        .product-details {
+            flex: 1;
+            min-width: 280px;
+        }
+
+            .product-details h1 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .product-details p {
+                color: #555;
+                line-height: 1.6;
+            }
+
+            .product-details ul {
+                margin-top: 1rem;
+                color: #666;
+            }
+
+        .buttons-row {
+            margin-top: 1.5rem;
+        }
+
+            .buttons-row a {
+                background: #f5a623;
+                color: #fff;
+                padding: 0.8rem 1.5rem;
+                border-radius: 2rem;
+                text-decoration: none;
+                font-weight: 600;
+                margin-right: 1rem;
+            }
+
+        .fullwidthwithbgcolor {
+            width: 100%;
+            background-color: lightgreen;
+        }
+
+        #ad-container {
+            /* width: 100%;
+          max-width: 500px;*/
+            width: 300px;
+            height: 280px;
+            margin: auto;
+            text-align: center;
+        }
+
+            #ad-container img {
+                width: 300px;
+                height: 280px;
+                /*height: auto;*/
+                border-radius: 8px;
+            }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Crunchify Snacks</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Healthy. Crunchy. Delicious.</h1>
+            <p>Discover protein-packed roasted snacks made from natural ingredients. No oil, no preservatives — just roasted goodness.</p>
+            <div class="buttons">
+                <a href="#shop">Shop Now</a>
+                <a href="#about" style="background:#fff;color:#f5a623;border:2px solid #f5a623;">Learn More</a>
+            </div>
+        </div>
+        <img src="wwwroot/images/roastedchanalandingpage.jpeg" alt="Roasted Chana" />
+        <div>
+            <img src="" alt="" />
+        </div>
+    </section>
+    <!--Start - Added by Shubhangi - Ad rotator-->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <div class="fullwidthwithbgcolor">
+                <div id="ad-container">
+                    <img id="ad-image" src="wwwroot/images/chanaSprout.jpeg" alt="Ad Banner" />
+                </div>
+            </div>
+            <script>
+	            const ads = [
+	              "wwwroot/images/chanaBowl.jpeg",
+	              "wwwroot/images/chanaPlant.jpeg",
+	              "wwwroot/images/chanaSpread.jpeg",
+	              "wwwroot/images/chanaSprout.jpeg"
+	            ];
+
+	            let index = 0;
+	            const adImage = document.getElementById("ad-image");
+
+	            setInterval(() => {
+	              index = (index + 1) % ads.length;
+	              adImage.src = ads[index];
+	            }, 3000); // Change every 3 seconds
+            </script>
+        </div>
+    </section>
+    <!--End - Added by Shubhangi - Ad rotator-->
+    <section id="shop" class="section">
+        <h2>Featured Snacks</h2>
+        <div class="products">
+            <div class="product">
+                <img src="wwwroot/images/chanaBowl.jpeg" alt="Classic Chana" />
+                <div class="info">
+                    <h3>Classic Roasted Chana</h3>
+                    <p>Perfectly roasted, protein-rich and crisp.</p>
+                    <div class="price">₹99</div>
+                    <a href="#product" class="btn">View Product</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="wwwroot/images/chanaSpread.jpeg" alt="Masala Chana" />
+                <div class="info">
+                    <h3>Masala Crunch Chana</h3>
+                    <p>Spicy, tangy roasted chana for your cravings.</p>
+                    <div class="price">₹120</div>
+                    <a href="#product" class="btn">View Product</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="wwwroot/images/chanaSprout.jpeg" alt="Combo Pack" />
+                <div class="info">
+                    <h3>Combo Pack (All Flavors)</h3>
+                    <p>Try them all — perfect for gifting or sampling.</p>
+                    <div class="price">₹299</div>
+                    <a href="#product" class="btn">View Product</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <h2>About Crunchify Snacks</h2>
+        <p>We started Crunchify Snacks with one goal — to make healthy snacking tasty and fun! Our snacks are roasted, never fried, and come straight from local farms to your table.</p>
+    </section>
+
+    <!-- Product Page -->
+    <section id="product" class="product-page">
+        <img src="wwwroot/images/roastedchanalandingpage.jpeg" alt="Classic Roasted Chana" width="300px" height="350px" />
+        <div class="product-details">
+            <h1>Classic Roasted Chana</h1>
+            <div class="price" style="font-size:1.3rem;font-weight:700;">₹99</div>
+            <p>Our Classic Roasted Chana is the perfect blend of taste and nutrition — high in protein, gluten-free, and roasted to golden perfection.</p>
+            <ul>
+                <li>Roasted, not fried</li>
+                <li>High protein & fiber</li>
+                <li>No preservatives</li>
+            </ul>
+            <div class="buttons-row">
+                <a href="#cart">Add to Cart</a>
+                <a href="#buy" style="background:#fff;color:#f5a623;border:2px solid #f5a623;">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="section location">
+        <div style="text-align:center">
+            <b>Address:</b> Sasan Ramapur, Maharashtra, India<br />
+            P.O Box 444705<br /><br />
+            <b>Phone:</b> +91-7709295909 - Nature's Knack<br />
+            <b>Email:</b> nivruti.dhone@gmail.com<br />
+            <b>Timing:</b> Mon-Fri - 08:00-19:00<br />
+        </div>
+        <div>
+            <br />
+            <br />
+            <!-- SK Comments - Below iframe tag is for Address/location.. need to copy paste tag wherever want to paste to view on browser.. -->
+            <iframe id="contact_690b6cc4e1150" class="map-container iframeLazyload entered loaded" data-src="https://maps-cdn.site123.com/include/globalMapDisplay.php?q=Sasan+Ramapur%2C+Maharashtra%2C+India&amp;z=15&amp;l=en&amp;ilfc=" frameborder="0" style="pointer-events: none;" data-ll-status="loaded" src="https://maps-cdn.site123.com/include/globalMapDisplay.php?q=Sasan+Ramapur%2C+Maharashtra%2C+India&amp;z=15&amp;l=en&amp;ilfc="></iframe>
+            <br />
+            <br />
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Crunchify Snacks. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Ad Rotator</title>
+	<style>
+        .fullwidthwithbgcolor {
+			width:100%;
+			background-color:lightgreen;
+		}
+        #ad-container {
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            text-align: center;
+        }
+
+		#ad-container img {
+			width: 100%;
+			height: auto;
+			border-radius: 8px;
+		}
+	</style>
+	
+</head>
+<body>
+	<div>
+		<img src="wwwroot/images/roastedchanalandingpage.jpeg" alt="Roasted Chana" width="100px" height="150px" />
+		<h1>I like to eat <b>Roasted Chana</b> because it sooooooo.... <i><b>CRUNCHYYYYYYYYYYYY</b></i></h1>
+
+	</div>
+	<div class="fullwidthwithbgcolor">
+		<div id="ad-container">
+			<img id="ad-image" src="wwwroot/images/roastedchanalandingpage.jpeg" alt="Ad Banner" />
+		</div>
+	</div>
+	<script>
+		const ads = [
+		  "wwwroot/images/roastedchanalandingpage.jpeg",
+		  "wwwroot/images/chanaBowl.jpeg",
+		  "wwwroot/images/chanaPlant.jpeg",
+		  "wwwroot/images/chanaSpread.jpeg",
+		  "wwwroot/images/chanaSprout.jpeg"
+		];
+
+		let index = 0;
+		const adImage = document.getElementById("ad-image");
+
+		setInterval(() => {
+		  index = (index + 1) % ads.length;
+		  adImage.src = ads[index];
+		}, 3000); // Change every 3 seconds
+	</script>
+</body>
+</html>
